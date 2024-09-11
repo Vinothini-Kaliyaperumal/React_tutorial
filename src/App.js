@@ -8,7 +8,7 @@ import Old from './Components/Old';
 import New from './Components/New';
 import Login from './Components/Login';
 import Dashboard from './Components/Dashboard';
-
+import Arrowfunction from './Components/Arrowfunction';
 
 function App() {
  const name = "vino"
@@ -25,6 +25,7 @@ function App() {
       <li><Link to='/books/old'>Old</Link></li>
       {/* <li><Link to='/books/new'>New</Link></li> */}
       <li><Link to='/login'>Login</Link></li>
+      <li><Link to='/arrowfunction'>Arrowfunction</Link></li>
     </ul>
      <Routes>
       <Route path='/' element={<Home name1={name}/>}/>
@@ -37,7 +38,7 @@ function App() {
       </Route>
       <Route path='/login' element={<Login/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
-      
+      <Route path='/Arrowfunction' element={<Arrowfunction/>}/>
      </Routes>
      </BrowserRouter>
     </div>
