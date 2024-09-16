@@ -1,18 +1,26 @@
-import React, { useRef } from 'react';
+import React, { useReducer } from 'react';
 
-function TextInput() {
-  const inputRef = useRef();
+const initialState = { count: 0 };
 
-  const focusInput = () => {
-    inputRef.current.focus();
-  };
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
-      <input ref={inputRef} type="text" />
-      <button onClick={focusInput}>Focus the input</button>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
     </div>
   );
 }
-
-export default TextInput;

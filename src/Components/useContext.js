@@ -1,45 +1,16 @@
-import React, { useContext } from 'react';
+import React, { createContext, useContext } from 'react';
 
-const MyContext = React.createContext();
+const MyContext = createContext();
+
+function Child() {
+  const value = useContext(MyContext);
+  return <p>Value from context: {value}</p>;
+}
 
 function Parent() {
   return (
-    <MyContext.Provider value="Hello from context">
+    <MyContext.Provider value="Hello, World!">
       <Child />
     </MyContext.Provider>
   );
 }
-
-function Child() {
-  const message = useContext(MyContext);
-  return <div>{message}</div>;
-}
-
-export default Parent;
-
-
-
-import React, { useContext } from 'react';
-
-// Create a Context
-const MyContext = React.createContext();
-
-function Parent() {
-  const value = "Hello from context!";
-
-  return (
-    // Provide the context value to child components
-    <MyContext.Provider value={value}>
-      <Child />
-    </MyContext.Provider>
-  );
-}
-
-function Child() {
-  // Access the context value using useContext
-  const message = useContext(MyContext);
-
-  return <p>{message}</p>;  // Display the context value
-}
-
-export default Parent;
