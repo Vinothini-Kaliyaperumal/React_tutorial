@@ -37,3 +37,41 @@ function Timer() {
 }
 
 export default Timer;
+
+import React, { Component } from 'react';
+import ChildComponent from './ChildComponent';
+
+class ParentComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      parentData: 'Hello from parent!'
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Parent Component</h1>
+        <ChildComponent message={this.state.parentData} />
+      </div>
+    );
+  }
+}
+
+export default ParentComponent;
+
+import React, { Component } from 'react';
+
+class ChildComponent extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Child Component</h2>
+        <p>{this.props.message}</p>
+      </div>
+    );
+  }
+}
+
+export default ChildComponent;
