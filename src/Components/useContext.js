@@ -1,16 +1,41 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useState } from 'react';
 
-const MyContext = createContext();
+// Create a context with a default value
+const MyContext = createContext(null);
 
-function Child() {
-  const value = useContext(MyContext);
-  return <p>Value from context: {value}</p>;
-}
+export const MyProvider = ({ children }) => {
+  const [value, setValue] = useState("Hello, World!");
 
-function Parent() {
   return (
-    <MyContext.Provider value="Hello, World!">
-      <Child />
+    <MyContext.Provider value={{ value, setValue }}>
+      {children}
     </MyContext.Provider>
   );
-}
+};
+import React, { useContext } from 'react';
+import { MyContext } from './MyProvider';
+
+const MyComponent = () => {
+  const { value, setValue } = useContext(MyContext);
+
+  return (
+    <div>
+      <p>{value}</p>
+      <button onClick={() => setValue("New Value!")}>Change Value</button>
+    </div>
+  );
+};
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { MyProvider } from './MyProvider';
+import MyComponent from './MyComponent';
+
+const App = () => {
+  return (
+    <MyProvider>
+      <MyComponent />
+    </MyProvider>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
