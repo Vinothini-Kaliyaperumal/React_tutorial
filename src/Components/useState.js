@@ -49,3 +49,22 @@ const Form = () => {
 };
 
 export default Form;
+
+
+function findDisappearedNumbers(nums) {
+  const n = nums.length;
+  const result = [];
+
+  // Check for numbers from 1 to n
+  for (let i = 1; i <= n; i++) {
+      if (!nums.includes(i)) {
+          result.push(i);
+      }
+  }
+
+  return result;
+}
+
+// Example usage:
+console.log(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])); // Output: [5, 6]
+console.log(findDisappearedNumbers([1, 1])); // Output: [2]

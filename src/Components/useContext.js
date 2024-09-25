@@ -39,3 +39,58 @@ const App = () => {
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+
+// ThemeContext.js
+import React, { createContext, useState } from 'react';
+
+// Create a Context
+export const ThemeContext = createContext();
+
+// Create a Provider Component
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light'); // Initial theme
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+// ThemedComponent.js
+import React, { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
+
+const ThemedComponent = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext); // Use the context
+
+  return (
+    <div style={{ background: theme === 'light' ? '#fff' : '#333', color: theme === 'light' ? '#000' : '#fff', padding: '20px' }}>
+      <h1>{theme.charAt(0).toUpperCase() + theme.slice(1)} Theme</h1>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+    </div>
+  );
+};
+
+export default ThemedComponent;
+
+
+// App.js
+import React from 'react';
+import { ThemeProvider } from './ThemeContext';
+import ThemedComponent from './ThemedComponent';
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <ThemedComponent />
+    </ThemeProvider>
+  );
+};
+
+export default App;
