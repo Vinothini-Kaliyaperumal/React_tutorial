@@ -77,6 +77,23 @@ const ThemedComponent = () => {
   );
 };
 
+import React, { useContext } from 'react';
+
+// Step 1: Create a context
+const UserContext = React.createContext();
+
+function App() {
+  const user = { name: "John", age: 25 };
+
+  return (
+    // Step 2: Use a provider to pass down the context value
+    <UserContext.Provider value={user}>
+      <UserProfile />
+    </UserContext.Provider>
+  );
+}
+
+
 export default ThemedComponent;
 
 

@@ -39,3 +39,27 @@ const UserList = () => {
 };
 
 export default UserList;
+
+import { useEffect, useState } from 'react';
+
+function Timer() {
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    // Increment time by 1 second after every second
+    const interval = setInterval(() => {
+      setTime(prevTime => prevTime + 1);
+    }, 1000);
+
+    // Cleanup function to clear the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+      <p>Time: {time} seconds</p>
+    </div>
+  );
+}
+
+export default Timer;
