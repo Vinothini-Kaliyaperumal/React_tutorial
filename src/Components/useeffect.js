@@ -63,3 +63,30 @@ function Timer() {
 }
 
 export default Timer;
+import React, { useEffect } from 'react';
+
+function MyComponent() {
+    useEffect(() => {
+        console.log('Component mounted');
+
+        // Cleanup function (optional)
+        return () => {
+            console.log('Component unmounted');
+        };
+    }, []); // Empty array: effect runs only once
+
+    return <div>Hello, World!</div>;
+}
+import React, { useEffect, useState } from 'react';
+
+function DataFetchingComponent() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetch('https://api.example.com/data')
+            .then(response => response.json())
+            .then(json => setData(json));
+    }, []); // Run only once, when the component mounts
+
+    return <div>{data ? JSON.stringify(data) : 'Loading...'}</div>;
+}

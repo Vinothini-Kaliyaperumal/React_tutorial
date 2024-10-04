@@ -96,10 +96,43 @@ function App() {
 
 export default ThemedComponent;
 
+import React from 'react';
+import { MyContext } from './MyContext';
+
+function App() {
+    const user = { name: 'John', age: 25 };
+
+    return (
+        // Step 2: Providing the context value
+        <MyContext.Provider value={user}>
+            <ChildComponent />
+        </MyContext.Provider>
+    );
+}
+
+
 
 // App.js
 import React from 'react';
 import { ThemeProvider } from './ThemeContext';
+
+
+
+
+import React, { useContext } from 'react';
+import { MyContext } from './MyContext';
+
+function ChildComponent() {
+    // Step 3: Consuming the context value using useContext
+    const user = useContext(MyContext);
+
+    return (
+        <div>
+            <h1>Name: {user.name}</h1>
+            <p>Age: {user.age}</p>
+        </div>
+    );
+}
 import ThemedComponent from './ThemedComponent';
 
 const App = () => {
