@@ -90,3 +90,117 @@ function DataFetchingComponent() {
 
     return <div>{data ? JSON.stringify(data) : 'Loading...'}</div>;
 }
+import React, { useState } from 'react';
+
+function SimpleForm() {
+  // State to store form values
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+  });
+
+  // Handle change for each input field
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page refresh
+    console.log('Form Data Submitted:', formData);
+  };
+
+  return (
+    <div>
+      <h2>Simple Form</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter your name"
+          />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default SimpleForm;
+import React, { useState, useEffect } from 'react';
+
+function FormWithEffect() {
+  // State to store form values
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+  });
+
+  // Handle change for each input field
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page refresh
+    // Here we could call an API or perform some action with form data
+    console.log('Form Data Submitted:', formData);
+  };
+
+  // useEffect to run side effects when formData changes
+  useEffect(() => {
+    if (formData.name || formData.email) {
+      console.log('Form data updated:', formData);
+    }
+  }, [formData]); // Runs when formData changes
+
+  return (
+    <div>
+      <h2>Form with useEffect</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter your name"
+          />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+  
