@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 function Arrowfunction() {
-    hello = function() {
-        return "Hello World!";
-      }
-      document.getElementById("demo").innerHTML = hello();
+
   return (
+    <Fragment>
     <div>
-      <p id='demo'></p>
+      <h1>helo</h1>
     </div>
+    </Fragment>
   )
 }
 
