@@ -50,18 +50,32 @@
 
 
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
-// import './App.css';
+import Sample from "./sample";
+import Compo from "./Components/Compo"
+
 
 function App(){
   
 return(
+    // Components import method
 <div className="App">
  <Header /> 
  <Content />
  <Footer />
+ <Compo />
+ 
+
+  {/* <BrowserRouter>
+    <Routes>
+        <Route path="/sample" element={<Sample />}></Route>
+        
+    </Routes>
+  </BrowserRouter> */}
+
 </div>
 );
 }

@@ -16,16 +16,48 @@
 
 
 
+// REACT JSX TOPIC:
 
 import React from 'react'
+let customCSS = "code";
+const logginIn =false;
+const greetings = logginIn ? <p>Welcome back!!</p> : <p>Please login.</p>;
+const items = ["item1", "item2", "item3", "item4"]
 
-function sample() {
+const Sample = () => {
   return (
+    // JSX Fragements:
     <div>
-      Hello<br></br>
-      Hiiii
+      <h2 className='head'>sdfghj</h2>
+      <p className='para'>Vino</p>
+      
+{/* {Javascript expression in JSX} */}
+    <p className={customCSS} style={{fontSize:'25px', fontStyle:'italic'}}>10 + 20 ={10+20}</p>
+
+    {/* {JSX with conditional rendering:} */}
+    {greetings}
+
+    {/* JSX with Lists: */}
+    <ul>{items.map((item, intex) => (<li key={intex}>{item}</li>))}</ul>
     </div>
   )
 }
 
-export default sample
+export default Sample;
+
+
+
+
+
+
+// import React from 'react'
+
+// function sample() {
+//   return (
+//     <div>
+      
+//     </div>
+//   )
+// }
+
+// export default sample
