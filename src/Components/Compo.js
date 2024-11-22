@@ -1,5 +1,3 @@
-
-
 function Compo(){
     return(
         <div>
@@ -8,3 +6,4 @@ function Compo(){
     )
 }
 export default Compo
+

@@ -50,24 +50,33 @@
 
 
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
 import Sample from "./sample";
 import Compo from "./Components/Compo"
+import Functional from "./Components/Functional component";
+import Mywebsite from "./Components/Class component";
+import Learnreactprops from "./Components/Props";
 
 
 function App(){
   
 return(
-    // Components import method
+  // Components import method
 <div className="App">
  <Header /> 
  <Content />
  <Footer />
+ <Sample />
  <Compo />
- 
+ <Functional />
+<Mywebsite />
+{/* <Learnreactprops /> */}
+<Learnreactprops />
+
+ {/* Another component import method  */}
 
   {/* <BrowserRouter>
     <Routes>
