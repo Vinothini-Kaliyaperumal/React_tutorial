@@ -1,40 +1,40 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 
 function Functional() {
   return (
     <div>
-       <h1>Functional Component</h1>
-           <p>Example</p>
+       <h2>Functional Component</h2>
     </div>
   )
 }
-function Navbar(){
+ function Navbar(){
     return(
         <div>
             <h2>Navbar</h2>
         </div>
     )
 }
-function Slidebar(){
+ function  Slidebar(){
     return(
         <div>
             <h2>Slidebar</h2>
         </div>
     )
 }
-function Mainbar(){
+function Main(){
     return(
         <div>
           <Functional />
           <Navbar />
           <Slidebar />
+          <h2>Vinooooo</h2>
         </div>
     )
 }
 
-ReactDOM.render(<Mainbar />, document.getElementById('root'));
+// ReactDOM.render(<vino />, document.getElementById('root'));
 
-export default Functional;
+export default Main;
 
 

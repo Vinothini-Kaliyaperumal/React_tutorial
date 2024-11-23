@@ -1,6 +1,6 @@
 // import React from 'react'
 
-// const Sample = () => {
+// const Jsx = () => {
 //   return (
 //     <div>
 //       Kaliyaperumal<br></br>
@@ -11,7 +11,7 @@
 //     </div>
 //   )
 // }
-// export default Sample
+// export default Jsx
 
 
 
@@ -24,7 +24,7 @@ const logginIn =false;
 const greetings = logginIn ? <p>Welcome back!!</p> : <p>Please login.</p>;
 const items = ["item1", "item2", "item3", "item4"]
 
-const Sample = () => {
+const Jsx = () => {
   return (
     // JSX Fragements:
     <div>
@@ -43,7 +43,7 @@ const Sample = () => {
   )
 }
 
-export default Sample;
+export default Jsx;
 
 
 

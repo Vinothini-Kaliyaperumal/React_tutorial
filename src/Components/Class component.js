@@ -21,4 +21,4 @@ class Mynewwebsite extends React.Component
 }
 ReactDOM.render(<Mynewwebsite />, document.getElementById('root'));
 
-export default Mywebsite;
+export default Mynewwebsite;

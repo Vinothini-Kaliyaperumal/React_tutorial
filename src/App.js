@@ -49,41 +49,50 @@
 // export default App;
 
 
-
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
-import Sample from "./sample";
+import Jsx from "./Jsx";
 import Compo from "./Components/Compo"
-import Functional from "./Components/Functional component";
-import Mywebsite from "./Components/Class component";
-import Learnreactprops from "./Components/Props";
-
+import Main from "./Components/Functional component";
+import Mynewwebsite from "./Components/Class component";
+import Learnreactpropsparant from "./Components/Props";
+import Props from "./Components/Props";
 
 function App(){
   
 return(
-  // Components import method
+ 
 <div className="App">
- <Header /> 
- <Content />
- <Footer />
- <Sample />
- <Compo />
- <Functional />
-<Mywebsite />
-{/* <Learnreactprops /> */}
-<Learnreactprops />
+{/* // Components import method */}
+ {/* <Header />   */}
+ {/* <Content /> */}
+ {/* <Footer /> */}
+ {/* <Sample /> */}
+ {/* <Compo /> */}
+ {/* <Functional /> */}
+ {/* <Main /> */}
+ {/* <Mywebsite /> */}
 
- {/* Another component import method  */}
 
-  {/* <BrowserRouter>
+ {/* Another components import method  */}
+ <BrowserRouter>
     <Routes>
-        <Route path="/sample" element={<Sample />}></Route>
-        
-    </Routes>
-  </BrowserRouter> */}
+        <Route path="/jsx" element={<Jsx />}></Route>
+        <Route path="/header" element={<Header />}></Route>
+        <Route path="/content" element={<Content />}></Route>
+        <Route path="/footer" element={<Footer />}></Route>
+        <Route path="/compo" element={<Compo />}></Route>
+        <Route path="/main" element={<Main />}></Route>
+        <Route path="/mynewwebsite" element={<Mynewwebsite />}></Route>
+        <Route path="/learnreactpropsparant" element={<Learnreactpropsparant />}></Route>
+        <Route path="/mynewwebsite" element={<Mynewwebsite />}></Route>
+        <Route path="/props" element={<Props />}></Route>
+
+
+        </Routes>
+  </BrowserRouter>
 
 </div>
 );
