@@ -32,14 +32,26 @@
 // FUNCTION BASED PROPS METHOD
 
 import React from 'react'
+// Props Method:
+// function User(props) {
+//   return (
+//     <div>
+//       <h1>{props.name}</h1>
+//       <h1>{props.age}</h1>
+//       <h1>{props.phoneNo}</h1>
+//       <h1>{props.email}</h1>
+//     </div>
+//   )
+// }
 
-function User(props) {
+// Js Destructuring method: Props ah eptium use pannalam
+function User({name, age, No, email}) {
   return (
     <div>
-      <h1>{props.name}</h1>
-      <h1>{props.age}</h1>
-      <h1>{props.phoneNo}</h1>
-      <h1>{props.email}</h1>
+      <h1>{name}</h1>
+      <h1>{age}</h1>
+      <h1>{No}</h1>
+      <h1>{email}</h1>
     </div>
   )
 }
@@ -51,15 +63,18 @@ function Props() {
         age:"21",
         No:"7654321234",
         email:"kvino@gmail.com",
-    };
+    }; 
 
   return (
     <div>
       <User 
-      name = {userData.name}
-      age = {userData.age}
-      phoneNo = {userData.No}
-      email = {userData.email}
+      // name = {userData.name}
+      // age = {userData.age}
+      // phoneNo = {userData.No}
+      // email = {userData.email}
+
+      // another method:
+      {...userData}
       />
     </div>
   )

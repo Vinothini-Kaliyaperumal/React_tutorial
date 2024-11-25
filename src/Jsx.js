@@ -20,7 +20,7 @@
 
 import React from 'react'
 let customCSS = "code";
-const logginIn =false;
+const logginIn =true;
 const greetings = logginIn ? <p>Welcome back!!</p> : <p>Please login.</p>;
 const items = ["item1", "item2", "item3", "item4"]
 
@@ -28,7 +28,7 @@ const Jsx = () => {
   return (
     // JSX Fragements:
     <div>
-      <h2 className='head'>sdfghj</h2>
+      <h2 className='head'>Learning React</h2>
       <p className='para'>Vino</p>
       
 {/* {Javascript expression in JSX} */}

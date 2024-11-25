@@ -59,6 +59,10 @@ import Main from "./Components/Functional component";
 import Mynewwebsite from "./Components/Class component";
 import Learnreactpropsparant from "./Components/Props";
 import Props from "./Components/Props";
+import Events from "./Components/Events";
+import Conditionals from "./Components/Conditionals";
+import Lists from "./Components/Lists";
+import Forms from "./Components/Forms";
 
 function App(){
   
@@ -89,8 +93,10 @@ return(
         <Route path="/learnreactpropsparant" element={<Learnreactpropsparant />}></Route>
         <Route path="/mynewwebsite" element={<Mynewwebsite />}></Route>
         <Route path="/props" element={<Props />}></Route>
-
-
+        <Route path="/events" element={<Events />}></Route>
+        <Route path="/conditionals" element={<Conditionals/>}></Route>
+        <Route path="/lists" element={<Lists/>}></Route>
+        <Route path="/forms" element={ <Forms/>}></Route>
         </Routes>
   </BrowserRouter>
 
