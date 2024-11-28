@@ -63,6 +63,15 @@ import Events from "./Components/Events";
 import Conditionals from "./Components/Conditionals";
 import Lists from "./Components/Lists";
 import Forms from "./Components/Forms";
+import Routers from "./Components/Router";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Customer from "./Components/Customer";
+import Dashboard from "./Components/Dashboard";
+import Login from "./Components/Login";
+
+
 
 function App(){
   
@@ -82,6 +91,7 @@ return(
 
  {/* Another components import method  */}
  <BrowserRouter>
+ <Customer />
     <Routes>
         <Route path="/jsx" element={<Jsx />}></Route>
         <Route path="/header" element={<Header />}></Route>
@@ -97,6 +107,14 @@ return(
         <Route path="/conditionals" element={<Conditionals/>}></Route>
         <Route path="/lists" element={<Lists/>}></Route>
         <Route path="/forms" element={ <Forms/>}></Route>
+        <Route path="/router" element={ <Routers />}></Route>
+        <Route path="/home" element={ <Home/>}></Route>
+        <Route path="/about" element={ <About />}></Route>
+        <Route path="/contact" element={ <Contact />}></Route>
+        <Route path="/customer" element={ <Customer />}></Route>
+        <Route path="/dashboard/:userName" element={ <Dashboard />}></Route>
+        <Route path="*" element={ <Login/>}></Route>
+       
         </Routes>
   </BrowserRouter>
 
