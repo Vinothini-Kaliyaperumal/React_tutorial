@@ -70,6 +70,12 @@ import Contact from "./Components/Contact";
 import Customer from "./Components/Customer";
 import Dashboard from "./Components/Dashboard";
 import Login from "./Components/Login";
+import Memo1 from "./Components/Memo1";
+import Memo2 from "./Components/Memo2";
+import Mainmemo from "./Components/Mainmemo";
+import Styling from "./Components/Styling";
+import New from "./Components/New";
+import Old from "./Components/Old";
 
 
 
@@ -114,7 +120,12 @@ return(
         <Route path="/customer" element={ <Customer />}></Route>
         <Route path="/dashboard/:userName" element={ <Dashboard />}></Route>
         <Route path="*" element={ <Login/>}></Route>
-       
+        <Route path="/memo1" element={ <Memo1 />}></Route>                    
+        <Route path="/memo2" element={ <Memo2 />}></Route>
+        <Route path="/mainmemo" element={ <Mainmemo />}></Route>
+        <Route path="/styling" element={ <Styling />}></Route>
+        <Route path="/new" element={ <New />}></Route>
+        <Route path="/old" element={ <Old />}></Route>
         </Routes>
   </BrowserRouter>
 

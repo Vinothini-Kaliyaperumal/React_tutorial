@@ -50,7 +50,7 @@ import React from 'react'
 function Routers() {
   return (
     <div>
-      
+      <h1>Router Home, About, Contact, Customer, Dashboard, Login </h1>
     </div>
   )
 }

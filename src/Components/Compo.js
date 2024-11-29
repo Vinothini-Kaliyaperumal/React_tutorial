@@ -5,5 +5,5 @@ function Compo(){
         </div>
     )
 }
-export default Compo
+export default Compo;
 
