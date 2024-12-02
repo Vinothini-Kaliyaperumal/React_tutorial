@@ -76,6 +76,11 @@ import Mainmemo from "./Components/Mainmemo";
 import Styling from "./Components/Styling";
 import New from "./Components/New";
 import Old from "./Components/Old";
+import Classes from "./ECMAScript/Classes";
+import Arrowfunction from "./ECMAScript/Arrowfunction";
+import Variables from "./ECMAScript/Variables";
+import Array from "./ECMAScript/Array";
+import Destructring from "./ECMAScript/Destructring";
 
 
 
@@ -126,6 +131,12 @@ return(
         <Route path="/styling" element={ <Styling />}></Route>
         <Route path="/new" element={ <New />}></Route>
         <Route path="/old" element={ <Old />}></Route>
+        {/* EC6 */}
+        <Route path="/classes" element={ <Classes/>}></Route>
+        <Route path="/arrow" element={ <Arrowfunction/>}></Route>
+        <Route path="/variables" element={ <Variables/>}></Route>
+        <Route path="/array" element={ <Array/>}></Route>
+        <Route path="/destructring" element={ <Destructring/>}></Route>
         </Routes>
   </BrowserRouter>
 
