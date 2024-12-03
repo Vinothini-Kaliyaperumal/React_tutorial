@@ -81,7 +81,18 @@ import Arrowfunction from "./ECMAScript/Arrowfunction";
 import Variables from "./ECMAScript/Variables";
 import Array from "./ECMAScript/Array";
 import Destructring from "./ECMAScript/Destructring";
+import SpreadOperator from "./ECMAScript/Spread Operator";
+import greetMessage, {name, age as num, add, mul, sub} from "./ECMAScript/Modules";
+import greetMessagee from "./ECMAScript/Spread Operator";
+console.log(name);
+console.log(num);
 
+add(1, 2)
+mul(1, 2)
+sub(1, 2)
+
+greetMessagee('Rose')
+greetMessage('Max')
 
 
 function App(){
@@ -137,6 +148,9 @@ return(
         <Route path="/variables" element={ <Variables/>}></Route>
         <Route path="/array" element={ <Array/>}></Route>
         <Route path="/destructring" element={ <Destructring/>}></Route>
+        <Route path="/spread" element={ <SpreadOperator/>}></Route>
+        <Route path="/modules" element={ <Modules/>}></Route>
+        
         </Routes>
   </BrowserRouter>
 

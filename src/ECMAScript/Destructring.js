@@ -1,14 +1,34 @@
-import React from 'react'
-
+// import React from 'react'
+// Object Destructring:
 function Destructring() {
-  const snack = {
+  return{
     name : 'pizza',
     size : '10',
     topping : 'Chesse'
-  }
-  const {name, size, topping} = snack
-  console.log(name, size, topping)
-
 }
+}
+  const snack = Destructring()
+  const {topping, name, size } = snack
+  console.log(topping, name, size)
+
+
+  // Array Destructring:
+function Destructrings() {
+  return[
+     'pizza',
+     '10',
+     'Chesse'
+]
+}
+  const numbers = Destructrings()
+  const [a, b] = numbers
+  console.log(a, b)
+
+
+const functionComponent = ({name}) => {
+  console.log(name)
+}
+
+functionComponent({name : "Vino", age : "21"})
 
 export default Destructring
