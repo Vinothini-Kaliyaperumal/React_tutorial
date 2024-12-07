@@ -25,8 +25,8 @@ function Destructrings() {
   console.log(a, b)
 
 
-const functionComponent = ({name}) => {
-  console.log(name)
+const functionComponent = ({age}) => {
+  console.log(age)
 }
 
 functionComponent({name : "Vino", age : "21"})

@@ -18,7 +18,7 @@ function Conditionals() {
     let b = a === 13 ? <h1>Available Number</h1> : <h1>Not Available Number</h1>
 
        //  Conditional rendering: Using && Operator
-    let c = a === 10 && <h1>React Application</h1>  
+    let c = a === 20 && <h1>React Application</h1>  
 
   return (
     <div>

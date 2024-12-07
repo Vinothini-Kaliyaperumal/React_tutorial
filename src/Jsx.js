@@ -38,7 +38,7 @@ const Jsx = () => {
     {greetings}
 
     {/* JSX with Lists: */}
-    <ul>{items.map((item, intex) => (<li key={intex}>{item}</li>))}</ul>
+    <ol>{items.map((item, intex) => (<li key={intex}>{item}</li>))}</ol>
     </div>
   )
 }

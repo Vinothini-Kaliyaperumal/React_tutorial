@@ -76,14 +76,16 @@ import Mainmemo from "./Components/Mainmemo";
 import Styling from "./Components/Styling";
 import New from "./Components/New";
 import Old from "./Components/Old";
-import Classes from "./ECMAScript/Classes";
+import Demo from "./ECMAScript/Classes";
 import Arrowfunction from "./ECMAScript/Arrowfunction";
 import Variables from "./ECMAScript/Variables";
 import Array from "./ECMAScript/Array";
 import Destructring from "./ECMAScript/Destructring";
 import SpreadOperator from "./ECMAScript/Spread Operator";
 import greetMessage, {name, age as num, add, mul, sub} from "./ECMAScript/Modules";
-import greetMessagee from "./ECMAScript/Spread Operator";
+import greetMessagee from "./ECMAScript/Modules";
+import Usestate from "./Hooks/Usestate";
+
 console.log(name);
 console.log(num);
 
@@ -143,13 +145,14 @@ return(
         <Route path="/new" element={ <New />}></Route>
         <Route path="/old" element={ <Old />}></Route>
         {/* EC6 */}
-        <Route path="/classes" element={ <Classes/>}></Route>
+        <Route path="/demo" element={ <Demo/>}></Route>
         <Route path="/arrow" element={ <Arrowfunction/>}></Route>
         <Route path="/variables" element={ <Variables/>}></Route>
         <Route path="/array" element={ <Array/>}></Route>
         <Route path="/destructring" element={ <Destructring/>}></Route>
         <Route path="/spread" element={ <SpreadOperator/>}></Route>
-        <Route path="/modules" element={ <Modules/>}></Route>
+        {/* <Route path="/modules" element={ <Modules/>}></Route> */}
+        <Route path="/usestate" element={ <Usestate/>}></Route>
         
         </Routes>
   </BrowserRouter>
