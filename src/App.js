@@ -85,6 +85,7 @@ import SpreadOperator from "./ECMAScript/Spread Operator";
 import greetMessage, {name, age as num, add, mul, sub} from "./ECMAScript/Modules";
 import greetMessagee from "./ECMAScript/Modules";
 import Usestate from "./Hooks/Usestate";
+import Useeffect from "./Hooks/Useeffect";
 
 console.log(name);
 console.log(num);
@@ -153,7 +154,8 @@ return(
         <Route path="/spread" element={ <SpreadOperator/>}></Route>
         {/* <Route path="/modules" element={ <Modules/>}></Route> */}
         <Route path="/usestate" element={ <Usestate/>}></Route>
-        
+        <Route path="/useeffect" element={ <Useeffect/>}></Route>
+
         </Routes>
   </BrowserRouter>
 
