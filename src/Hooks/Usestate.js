@@ -11,12 +11,12 @@ function Usestate() {
 
         // num = num + 1
 
-        setNum(200) //Direct ah value ah pass panrathu
+        // setNum(200) //Direct ah value ah pass panrathu
 
         // currentvalue la erunthu increement or update panrathu
-        // setNum((currenValue) =>{
-        //   return currenValue + 1;
-        // })
+        setNum((currenValue) =>{
+          return currenValue + 1;
+        })
         
     }; 
     console.log(num)

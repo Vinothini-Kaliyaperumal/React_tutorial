@@ -18,7 +18,7 @@ function Useeffect() {
 
  }, [first, second])
 
-//  console.log("first", first)
+ console.log("first", first)
   return (
     <div>
       <h1>{first}</h1>
