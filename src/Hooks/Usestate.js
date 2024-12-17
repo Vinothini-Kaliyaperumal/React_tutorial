@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 function Usestate() {
 
   const [num,setNum] = useState(1);   //usestate syntax
-    let x = 1;
+    // let x = 1;
 
     function handleAdd(){
         // x = x + 1 //x++ x+=
@@ -11,7 +11,7 @@ function Usestate() {
 
         // num = num + 1
 
-        // setNum(200) //Direct ah value ah pass panrathu
+        setNum(500) //Direct ah value ah pass panrathu
 
         // currentvalue la erunthu increement or update panrathu
         setNum((currenValue) =>{

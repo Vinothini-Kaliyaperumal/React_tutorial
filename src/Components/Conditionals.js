@@ -14,7 +14,7 @@ function Conditionals() {
     }
 
     //  Conditional rendering: Using ? Operator
-    let a = 10
+    let a = 20
     let b = a === 13 ? <h1>Available Number</h1> : <h1>Not Available Number</h1>
 
        //  Conditional rendering: Using && Operator

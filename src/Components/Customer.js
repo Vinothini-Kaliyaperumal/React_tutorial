@@ -13,6 +13,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 function Customer() {
+  console.log("Agalya")
   return (
     <nav>
       <h1>Priyaa</h1>

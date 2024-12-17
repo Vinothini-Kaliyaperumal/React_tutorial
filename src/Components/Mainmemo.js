@@ -3,14 +3,17 @@ import Memo1 from './Memo1'
 import Memo2 from './Memo2'
 
 function Mainmemo() {
+
   const [memo1Val, setmemo1] = useState(5)
   const [memo2Val, setmemo2] = useState(10)
+  
   function changememo1(){
     setmemo1(memo1Val + 1)
   }
   function changememo2(){
     setmemo2(memo2Val + 1)
   }
+  // console.log("mainmemo")
 
   return (
     <div>

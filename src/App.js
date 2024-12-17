@@ -118,6 +118,7 @@ return(
  {/* Another components import method  */}
  <BrowserRouter>
  <Customer />
+ 
     <Routes>
         <Route path="/jsx" element={<Jsx />}></Route>
         <Route path="/header" element={<Header />}></Route>
