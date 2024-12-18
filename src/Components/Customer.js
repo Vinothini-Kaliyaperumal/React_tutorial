@@ -15,14 +15,14 @@ import {Link} from 'react-router-dom'
 function Customer() {
   console.log("Agalya")
   return (
-    <nav>
+    <div>
       <h1>Priyaa</h1>
       <ul>
         <Link to="/home">Home</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/about">About</Link>
       </ul>
-    </nav>
+    </div>
   )
 }
 
