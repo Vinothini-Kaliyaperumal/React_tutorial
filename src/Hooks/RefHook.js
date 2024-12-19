@@ -1,8 +1,8 @@
 import React, {useEffect, useRef, useState, } from 'react'
 
-function RefHook() {
+const RefHook = () => {
 
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState("");
     const inputRef = useRef();
 
     console.log("Getting rendering")
@@ -11,11 +11,9 @@ function RefHook() {
     //     inputRef.current = input;
     // }, [input]);
 
-   
-
     const display = () =>{
-        console.log(inputRef.current);
-        inputRef.current.focus();
+        console.log(inputRef.current.value);
+        // inputRef.current.focus();
     }
   return (
     <div>
@@ -27,10 +25,10 @@ function RefHook() {
        onChange={(event) => setInput(event.target.value)} 
     />
      <h3>My Name is {input} </h3>
-     <h3>My Name is {inputRef.current} </h3>
-    <button onClick = {display}>Show Input</button>
+     {/* <h3>My Name is {inputRef.current} </h3> */}
+    <button type='submit' onClick = {display}>Show Input</button>
    </div>
-  )
-}
+  );
+};
 
-export default RefHook
+export default RefHook;

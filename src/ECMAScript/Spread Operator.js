@@ -3,7 +3,7 @@
 // Spread Operator:
 function SpreadOperator() {
   let numbers = [11, 12, 13]
-const numbers1 = [14, 15, 16]
+  const numbers1 = [14, 15, 16]
   numbers = [...numbers,...numbers1]
   console.log(numbers)
   console.log(...numbers)

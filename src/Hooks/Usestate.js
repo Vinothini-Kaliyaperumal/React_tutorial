@@ -10,8 +10,10 @@ function Usestate() {
         // console.log("x", x);
 
         // num = num + 1
+       
+        
 
-        setNum(500) //Direct ah value ah pass panrathu
+        // setNum(500) //Direct ah value ah pass panrathu
 
         // currentvalue la erunthu increement or update panrathu
         setNum((currenValue) =>{

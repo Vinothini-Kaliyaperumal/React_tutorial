@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-// import Usestate from './Usestate';
 
 function Useeffect() {
  const [first, setFirst] = useState(100);
@@ -22,7 +21,7 @@ function Useeffect() {
   return (
     <div>
       <h1>{first}</h1>
-      <button onClick={() => setFirst(curval => curval + 1)}>AddButton</button>
+      <button onClick={() => setFirst(curval => curval + 5)}>AddButton</button>
       <h1>{second}</h1>
       <button onClick={() => setSecond(curval => curval + 1)}>AddButton</button>
     </div>
