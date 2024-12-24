@@ -87,6 +87,10 @@ import greetMessagee from "./ECMAScript/Modules";
 import Usestate from "./Hooks/Usestate";
 import Useeffect from "./Hooks/Useeffect";
 import RefHook from "./Hooks/RefHook";
+import UsememoHook from "./Hooks/UsememoHook";
+import Usecallback from "./Hooks/Usecallback";
+import Usecontext from "./Hooks/Usecontext";
+import Usereducer from "./Hooks/Usereducer";
 
 console.log(name);
 console.log(num);
@@ -160,6 +164,11 @@ return(
         <Route path="/usestate" element={ <Usestate/>}></Route>
         <Route path="/useeffect" element={ <Useeffect/>}></Route>
         <Route path="/useref" element={ <RefHook/>}></Route>
+        <Route path="/usememo" element={ <UsememoHook/>}></Route>
+        <Route path="/usecallback" element={ <Usecallback/>}></Route>
+        <Route path="/usecontext" element={ <Usecontext/>}></Route>
+        <Route path="/usereducer" element={ <Usereducer/>}></Route>
+
 
         </Routes>
   </BrowserRouter>
