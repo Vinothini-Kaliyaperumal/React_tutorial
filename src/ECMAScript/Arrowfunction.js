@@ -12,7 +12,7 @@ import React from 'react'
 // // return "Hello Arrowfunction"
 // }
 
-// Arrow Functions Return Value by Default, reomove return keyword:
+// Arrow Functions Return Value by Default, remove return keyword:
 const Arrowfunction = () => "Arrowfunction third method"
 
 export default Arrowfunction
